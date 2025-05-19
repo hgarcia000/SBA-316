@@ -12,12 +12,12 @@ function checkLightMode() {
         lightEl.id = "lightmode";
         lightEl.style = "color: #1f1f1f";
         h1El.textContent = "Light Mode";
-        buttonEl.textContent = "Enable Dark Mode";
+        lightEl.firstChild.textContent = "Enable Dark Mode";
     } else {
         lightEl.id = "darkmode";
         lightEl.style ="color: #f0f1f5";
         h1El.textContent = "Dark Mode";
-        buttonEl.textContent = "Disable Dark Mode";
+        lightEl.firstChild.textContent = "Disable Dark Mode";
     }    
 } 
 
@@ -41,6 +41,11 @@ formEl.addEventListener("submit", (e) => {
         const confirmation = confirm("Would you like to submit this response?");
         if (confirmation) {
             responseEl.textContent = `Hello, ${e.target.elements["name"].value}! I see you're ${e.target.elements["age"].value} years old!`;
+            for (const element of e.target.elements) {
+                if (element.required) {
+                    element.value = "";
+                }
+            }
             lightEl.appendChild(responseEl);
         }
         
