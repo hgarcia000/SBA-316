@@ -1,2 +1,2 @@
 # SBA-316
-This a
+This application asks a user for their name and age and returns those values as a part of its response. Basic form validation is implemented to ensure that the name and age must be filled in and the age must be a whole number greater than 0. The application also includes a button to toggle between light and dark CSS styling based on the user's preference.
