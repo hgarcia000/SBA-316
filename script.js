@@ -12,12 +12,12 @@ function checkLightMode() {
         lightEl.id = "lightmode";
         lightEl.style = "color: #1f1f1f";
         h1El.textContent = "Light Mode";
-        buttonEl.textContent = "Enable Dark Mode";
+        lightEl.lastChild.textContent = "Enable Dark Mode";
     } else {
         lightEl.id = "darkmode";
         lightEl.style ="color: #f0f1f5";
         h1El.textContent = "Dark Mode";
-        buttonEl.textContent = "Disable Dark Mode";
+        lightEl.lastChild.textContent = "Disable Dark Mode";
     }    
 } 
 
