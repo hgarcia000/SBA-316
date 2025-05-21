@@ -2,7 +2,7 @@ const lightEl = document.getElementById("lightmode");
 
 const h1El = document.querySelector("h1");
 
-document.body.style = "background-color: #f0f1f5";
+document.body.style = "background-color: #f5f5f5";
 
 const buttonEl = document.createElement("button");
 buttonEl.textContent = "Enable Dark Mode";
@@ -12,7 +12,7 @@ let isLightMode = true;
 function checkLightMode() {
     if (isLightMode) {
         lightEl.id = "lightmode";
-        document.body.style = "background-color: #f0f1f5";
+        document.body.style = "background-color: #f5f5f5";
         lightEl.style = "color: #1f1f1f";
         h1El.textContent = "Light Mode";
         lightEl.firstChild.textContent = "Enable Dark Mode";
@@ -30,7 +30,9 @@ buttonEl.addEventListener("click", () =>{
     checkLightMode();
 });
 
+const docFrag = document.createDocumentFragment();
 const responseEl = document.createElement("h3");
+docFrag.appendChild(responseEl);
 
 const formEl = document.querySelector("form");
 const ageEl = formEl.elements["age"];
@@ -50,7 +52,7 @@ formEl.addEventListener("submit", (e) => {
                     element.value = "";
                 }
             }
-            lightEl.appendChild(responseEl);
+            lightEl.appendChild(docFrag);
         }
         
     }

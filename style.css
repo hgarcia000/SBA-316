@@ -1,9 +1,11 @@
 #lightmode {
     border: 2px solid #1f1f1f;
+    background-color: #f0f1f5;
     padding: 1rem;
 }
 
 #darkmode {
     border: 2px solid #f0f1f5;
+    background-color:#181818;
     padding: 1rem;
 }
